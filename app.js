@@ -1,22 +1,29 @@
+var sumFn = document.getElementById('sumFunction');
+var productFn = document.getElementById('multiplyFunction');
+var sumStash;
+var productStash;
+
 function sum(number1, number2) {
-  var sumFn = document.getElementById('sumFunction');
   sumFn.textContent = ('The sum of ' + number1 + ' and ' + number2 + ' is ' + (number1 + number2) + '.');
   return number1 + number2;
 }
 
-function multiply(number1, number2) {
-  var productFn = document.getElementById('multiplyFunction');
-  productFn.textContent = ('The product of ' + number1 + ' and ' + number2 + ' is ' + (number1 * number2) + '.');
-  return number1 * number2;
+function multiply(a, b) {
+  productFn.textContent = ('The product of ' + a + ' and ' + b + ' is ' + (a * b) + '.');
+  return a * b;
 }
 
-function sumAndMultiply(number1, number2, number3) {
-  var add = sum(sum(number1, number2), number3);
-  var product = multiply(multiply(number1, number2), number3);
+function sumAndMultiply(x, y, z) {
+  sumStash = sumFn.textContent;
+  productStash = productFn.textContent;
+  var add = sum(sum(x, y), z);
+  var product = multiply(multiply(x, y), z);
+  sumFn.textContent = sumStash;
+  productFn.textContent = productStash;
   var addFn = document.getElementById('sumOnly');
   var prodFn = document.getElementById('productOnly');
-  addFn.textContent = (number1 + ' and ' + number2 + ' and ' + number3 + ' sum to ' + add + '.');
-  prodFn.textContent = ('The numbers ' + number1 + ' and ' + number2 + ' and ' + number3 + ' have a product of ' + product + '.');
+  addFn.textContent = (x + ' and ' + y + ' and ' + z + ' sum to ' + add + '.');
+  prodFn.textContent = ('The numbers ' + x + ' and ' + y + ' and ' + z + ' have a product of ' + product + '.');
   return [add, product];
 }
 
