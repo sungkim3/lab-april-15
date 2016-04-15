@@ -1,8 +1,3 @@
-// function yell(aString) {
-//  var yellEl = document.getElementByID(‘yellElement’);
-//  yellEl.textContent = (aString.toUpperCase() + ‘!!!!!’);
-// }
-
 function sum(number1, number2) {
   var sumFn = document.getElementById('sumFunction');
   sumFn.textContent = ('The sum of ' + number1 + ' and ' + number2 + ' is ' + (number1 + number2) + '.');
