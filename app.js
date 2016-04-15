@@ -13,6 +13,7 @@ function multiply(number1, number2) {
 function sumAndMultiply(number1, number2, number3) {
   var add = sum(sum(number1, number2), number3);
   var product = multiply(multiply(number1, number2), number3);
+//I don't know what the problem we're running into here is. Need to find out how to store the value outside the function I guess.
   var addFn = document.getElementById('sumOnly');
   var prodFn = document.getElementById('productOnly');
   addFn.textContent = (number1 + ' and ' + number2 + ' and ' + number3 + ' sum to ' + add + '.');
