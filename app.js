@@ -25,3 +25,13 @@ function sumArray(numberArray) {
   console.log(numberArray.join(', ') + ' was passed in as an array of numbers, and ' + total + ' is their sum.');
   return total;
 }
+
+function multiplyArray(numberArray) {
+  var product = 1;
+  for (i = 0; i < numberArray.length; i++) {
+    product *= numberArray[i];
+  }
+  console.table(numberArray);
+  console.log('The numbers ' + numberArray.join(', ') + ' have a product of ' + product + '.');
+  return product;
+}
