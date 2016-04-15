@@ -31,7 +31,7 @@ function sumArray(numberArray) {
     total += numberArray[i];
   }
   var sumArrayFunc = document.getElementById('sumArrayFn');
-  //console.table(numberArray);
+  console.table(numberArray);
   sumArrayFunc.textContent = (numberArray.join(', ') + ' was passed in as an array of numbers, and ' + total + ' is their sum.');
   return total;
 }
@@ -42,7 +42,7 @@ function multiplyArray(numberArray) {
     product *= numberArray[i];
   }
   var prodArrayFunc = document.getElementById('multiplyArrayFn');
-  //console.table(numberArray);
+  console.table(numberArray);
   prodArrayFunc.textContent = ('The numbers ' + numberArray.join(', ') + ' have a product of ' + product + '.');
   return product;
 }
