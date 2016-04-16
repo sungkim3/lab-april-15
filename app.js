@@ -13,15 +13,15 @@ function multiply(a, b) {
   return a * b;
 }
 
-function sumAndMultiply(x, y, z) {
+function sumAndMultiply(number1, number2, number3) {
+  var add = sum(sum(number1, number2), number3);
+  var product = multiply(multiply(number1, number2), number3);
   sumStash = sumFn.textContent;
   productStash = productFn.textContent;
-  var add = sum(sum(x, y), z);
-  var product = multiply(multiply(x, y), z);
-  sumFn.textContent = sumStash;
-  productFn.textContent = productStash;
   var addFn = document.getElementById('sumOnly');
   var prodFn = document.getElementById('productOnly');
+  sumFn.textContent = sumStash;
+  productFn.textContent = productStash;
   addFn.textContent = (x + ' and ' + y + ' and ' + z + ' sum to ' + add + '.');
   prodFn.textContent = ('The numbers ' + x + ' and ' + y + ' and ' + z + ' have a product of ' + product + '.');
   return [add, product];
